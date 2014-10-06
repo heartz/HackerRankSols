@@ -1,0 +1,20 @@
+test = int(input())
+while(test):
+	digits=int(input())
+	str1="555"
+	str2="33333"
+	count=0
+	if((digits==0)|(digits==1)|(digits==2)|(digits==4)|(digits==7)):
+		print("-1")
+	else:
+		if(digits%3==0):
+			temp=int(digits/3)
+			print(temp*str1)
+		else:
+			while((digits%3)!=0):
+				digits=digits-5
+				count=count+1
+				temp=int(digits/3)
+			print(temp*str1,end='')
+			print(count*str2)
+	test=test-1
